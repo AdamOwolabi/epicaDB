@@ -17,3 +17,6 @@ server/build/
 /tmp/
 *.sst
 *.wal
+BEGINNER_OVERVIEW.md
+.github/issues/
+

@@ -50,6 +50,7 @@ Status DB::Open(const Options& options, const std::string& dir, DB** out) {
 DBImpl::DBImpl(const Options& options, std::string dir)
     : options_(options),
       dir_(std::move(dir)),
+      icmp_(),
       block_cache_(std::make_shared<BlockCache>(options.block_cache_size)),
       mem_(std::make_shared<MemTable>(icmp_)),
       versions_(std::make_unique<VersionSet>(dir_, options_, block_cache_)) {}
